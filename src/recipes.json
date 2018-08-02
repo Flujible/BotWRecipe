@@ -1,0 +1,28 @@
+{
+  "recipes": [
+    {
+      "name": "Meat-stuffed pumpkin",
+      "ingredients": [
+        {
+          "name": "pumpkin",
+          "quantity": 1
+        },
+        {
+          "name": "Raw gourmet meat",
+          "quantity": 1
+        }
+      ],
+      "img": "http://botw-recipes.com/assets/images/stuff/recipes/65.png",
+      "health": 28,
+      "stamina": 0,
+      "sell price": 60,
+      "effects": [
+        {
+          "name": "tough",
+          "level": 1,
+          "duration": "1:20"
+        }
+      ]
+    }
+  ]
+}
