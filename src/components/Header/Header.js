@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import StyledHeader from './Header.style.js'
+import StyledHeader from './Header.style.js';
 
 const Header = ({children}) => {
   return <StyledHeader>{children}</StyledHeader>;
