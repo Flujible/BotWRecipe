@@ -3,9 +3,12 @@
     src: url("./assets/fonts/TheWildBreathOfZelda.woff") format("woff"), url("./assets/fonts/TheWildBreathOfZelda.ttf") format("truetype");
 }
 
+@import url('https://fonts.googleapis.com/css?family=Catamaran|Fira+Sans');
+
 body {
-	font-family: Arial, sans-serif;
-	font-size: 16px;
-	line-height: 100%;
+	font-family: 'Catamaran', sans-serif;
   background-color: #fdffe0;
+  color: #161616;
+  font-size: 1.5em;
+  font-weight: 600;
 }
