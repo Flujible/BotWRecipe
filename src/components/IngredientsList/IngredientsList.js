@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import StyledIngredientsList from './IngredientsList.style.js'
 
 const IngredientsList = ({ ingredients }) => {
-  const ingredientsList = ingredients.map((ingredients) => {
-    <li>{ingredient.quantity} {ingredient.name}</li>
-  });
+  const listItems = ingredients.map((ingredient) =>
+    <li key={ingredient.name}>{ingredient.quantity} {ingredient.name}</li>
+  );
   return (
-    <StyledIngredientsList>{ingredientsList}</StyledIngredientsList>
+    <StyledIngredientsList>{listItems}</StyledIngredientsList>
   );
 }
 
@@ -21,19 +21,3 @@ IngredientsList.propTypes = {
 }
 
 export default IngredientsList;
-
-//TODO shouldnt be passing the ingredients data as a child, talk to Shaun
-// or Dan about how best to achieve this
-
-// {
-//   "ingredients": [
-//     {
-//       "name": "pumpkin",
-//       "quantity": 1
-//     },
-//     {
-//       "name": "Raw gourmet meat",
-//       "quantity": 1
-//     }
-//   ]
-// }

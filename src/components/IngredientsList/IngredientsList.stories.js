@@ -5,7 +5,7 @@ import IngredientsList from './IngredientsList';
 
 const ingredients = [
   {
-    "name": "pumpkin",
+    "name": "Pumpkin",
     "quantity": 1
   },
   {
@@ -17,5 +17,5 @@ const ingredients = [
 storiesOf('IngredientsList', module)
   .addDecorator((story, context) => withInfo(IngredientsList.description)(story)(context))
   .add('Standard', () => (
-    <IngredientsList ingredients={ingredients} />
+    <IngredientsList ingredients={ingredients}></IngredientsList>
   ))
