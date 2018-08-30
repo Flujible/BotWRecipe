@@ -5,9 +5,9 @@ import Attribute from './Attribute';
 
 storiesOf('Attribute', module)
   .addDecorator((story, context) => withInfo(Attribute.description)(story)(context))
-  .add('Image based', () => (
+  .add('Text based', () => (
     <Attribute
       title='Health'
       value='3'
-      ></Attribute>
+      />
   ));
