@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import StyledAttribute from './Attribute.style.js';
 
-const Attribute = ({ title, value }) => {
+// Component should render {value} number of {src} after 'title:' 
+
+const Attribute = ({ title, value, src }) => {
   return <StyledAttribute
             title={title}
             value={value}>{title}: {value}</StyledAttribute>;
