@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import StyledAttribute from './Attribute.style.js';
 
-<<<<<<< HEAD
 const Attribute = ({ title, value }) => {
   //create an array of ❤️ the same size of 'value'
   let string = '';
@@ -11,11 +10,6 @@ const Attribute = ({ title, value }) => {
   }
 
   //Render 'string' alongside the value given
-=======
-// Component should render {value} number of {src} after 'title:' 
-
-const Attribute = ({ title, value, src }) => {
->>>>>>> de156e7a646917bb7c744d3421cb6581c39bdd3b
   return <StyledAttribute
             title={title}
             value={value}>{title}: {string}</StyledAttribute>;
