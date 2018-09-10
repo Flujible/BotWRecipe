@@ -8,6 +8,6 @@ storiesOf('Attribute', module)
   .add('Image based', () => (
     <Attribute
       title='Health'
-      value='3'
+      value={5}
       ></Attribute>
   ));

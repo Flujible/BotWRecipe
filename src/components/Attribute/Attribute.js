@@ -3,9 +3,16 @@ import PropTypes from 'prop-types';
 import StyledAttribute from './Attribute.style.js';
 
 const Attribute = ({ title, value }) => {
+  //create an array of ❤️ the same size of 'value'
+  let string = '';
+  for (var i = 0; i < value; i++) {
+    string += '❤️';
+  }
+
+  //Render 'string' alongside the value given
   return <StyledAttribute
             title={title}
-            value={value}>{title}: {value}</StyledAttribute>;
+            value={value}>{title}: {string}</StyledAttribute>;
 }
 
 Attribute.description = `
@@ -18,7 +25,7 @@ Attribute.propTypes = {
   title: PropTypes.string.isRequired,
 
   /** The numerical amount of effect that the attribute offers e.g. if a recipe
-  heals Link for 2 hearts this value should be 2*/
+  heals Link for 2 hearts this value should be 2 ❤️❤️*/
   value: PropTypes.number.isRequired,
 }
 
