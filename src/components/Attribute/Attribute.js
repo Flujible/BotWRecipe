@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {StyledAttribute, StyledFont} from './Attribute.style.js';
 
-const Attribute = ({ title, value, type }) => {
+const Attribute = ({ title, value }) => {
   //create an array of ❤️ the same size of 'value'
   let string = '';
   for (var i = 0; i < value; i++) {
