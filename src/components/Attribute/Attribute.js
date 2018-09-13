@@ -16,7 +16,22 @@ const Attribute = ({ title, value, type }) => {
 Attribute.description = `
   Attributes are used to show what a food item provides for Link once eaten, for
   example 2 hearts of health or medium shock resistance
-`
+`;
+
+const AttrCategories = [
+  'Health',
+  'Electro',
+  'Hasty',
+  'Spicy',
+  'Chilly',
+  'Mighty',
+  'Hearty',
+  'Energizing',
+  'Enduring',
+  'Tough',
+  'Sneaky',
+  'Fireproof',
+];
 
 Attribute.propTypes = {
   /** The main text of the attribute to show e.g. 'Health:' or 'Effect:'*/
@@ -24,7 +39,7 @@ Attribute.propTypes = {
 
   /** The numerical amount of effect that the attribute offers e.g. if a recipe
   heals Link for 2 hearts this value should be 2 ❤️❤️*/
-  value: PropTypes.number.isRequired,
+  value: PropTypes.oneOf(AttrCategories).isRequired,
 }
 
 
