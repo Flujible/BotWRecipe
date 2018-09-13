@@ -1,18 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import StyledAttribute from './Attribute.style.js';
+import {StyledAttribute, StyledFont} from './Attribute.style.js';
 
-const Attribute = ({ title, value }) => {
+const Attribute = ({ title, value, type }) => {
   //create an array of ❤️ the same size of 'value'
   let string = '';
   for (var i = 0; i < value; i++) {
-    string += '❤️';
+    string += '';
   }
 
   //Render 'string' alongside the value given
-  return <StyledAttribute
-            title={title}
-            value={value}>{title}: {string}</StyledAttribute>;
+  return <StyledAttribute>{title}: <StyledFont>{string}</StyledFont></StyledAttribute>;
 }
 
 Attribute.description = `

@@ -4,4 +4,9 @@ const StyledAttribute = styled.p`
 
 `;
 
-export default StyledAttribute;
+const StyledFont = styled.span`
+  font-family: botw-icons-dual-color;
+  color: #ec2434;
+`;
+
+export {StyledAttribute, StyledFont};
