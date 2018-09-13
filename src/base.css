@@ -2,6 +2,10 @@
     font-family: TheWildBreathOfZelda;
     src: url("./assets/fonts/TheWildBreathOfZelda.woff") format("woff"), url("./assets/fonts/TheWildBreathOfZelda.ttf") format("truetype");
 }
+@font-face {
+  font-family: botw-icons-dual-color;
+  src: url("./assets/fonts/botw-icons-dual-color-1507911600.woff") format("woff"), url("./assets/fonts/botw-icons-dual-color-1507911600.ttf") format("truetype");
+}
 
 @import url('https://fonts.googleapis.com/css?family=Catamaran|Fira+Sans');
 
