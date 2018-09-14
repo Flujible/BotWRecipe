@@ -12,29 +12,30 @@ const getType = (type) => {
     '': '#fcfb0a',
     //Hasty
     '': '#108fff',
-    //Spicy - the second character needs to lay over the first and have this color: #fbfbe1
-    '': '#a3fcfe',
+    //Spicy
+    '': '#a3fcfe',
     //Chilly
-
+    '': '#ff9902',
     //Mighty
-
+    '': '#fbfbe1',
     //Hearty
-
+    '': '#fcfb0a',
     //Energizing
-
+    '': '#05e704',
     //Enduring
-
+    '': '#fcfb0a',
     //Tough
-
+    '': '#f3f3cf',
     //Sneaky
-
+    '': '#d03bfe',
     //Fireproof
-
+    '': '#ec444a',
   }[type];
 };
 
 const StyledFont = styled.span`
   font-family: botw-icons-dual-color;
+  //Look up what the colour should be based on the first character
   color: ${props => getType(props.children.charAt(0))};
 `;
 
