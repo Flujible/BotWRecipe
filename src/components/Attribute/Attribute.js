@@ -19,14 +19,8 @@ const getContent = (title, value) => {
 };
 
 const Attribute = ({ title, value }) => {
-  //create an array of ❤️ the same size of 'value'
-  let string = '';
-  for (var i = 0; i < value; i++) {
-    string += getContent(title);
-  }
-
   //Render 'string' alongside the value given
-  return <StyledAttribute>{title}: <StyledFont>{string}</StyledFont></StyledAttribute>;
+  return <StyledAttribute>{title}: <StyledFont title={title}>{getContent(title, value)}</StyledFont></StyledAttribute>;
 }
 
 Attribute.description = `
