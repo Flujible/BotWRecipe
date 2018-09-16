@@ -1,22 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {StyledAttribute, StyledFont} from './Attribute.style.js';
+import {StyledAttribute, StyledFont, StyledIconPart} from './Attribute.style.js';
+import icons from '../../libs/icons.js'
 
-const getContent = (type) => {
-  return {
-    'Health': '',
-    'Electro': '',
-    'Hasty': '',
-    'Spicy': '',
-    'Chilly': '',
-    'Mighty': '',
-    'Hearty': '',
-    'Energizing': '',
-    'Enduring': '',
-    'Tough': '',
-    'Sneaky': '',
-    'Fireproof': '',
-  }[type];
+//This only returns 1 icon, not the number needed
+const getContent = (title, value) => {
+  const length = icons[title].icon.length - 1;
+  let content = icons[title].icon.map((key, index) => {
+    if (index === 0) {
+      return key;
+    } else if (index === length) {
+      return <StyledIconPart title={title} final={true}>{key}</StyledIconPart>
+    } else {
+      return (<StyledIconPart>{key}</StyledIconPart>);
+    }
+  });
+  return content;
 };
 
 const Attribute = ({ title, value }) => {
