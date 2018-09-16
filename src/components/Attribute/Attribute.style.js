@@ -16,7 +16,12 @@ const getSecColour = (title) => {
 const StyledFont = styled.span`
   font-family: botw-icons-dual-color;
   //Look up what the colour should be based on the first character
-  color: ${props => getType(props.children.charAt(0))};
+  color: ${props => getColour(props.title)};
+`;
+
+const StyledIconPart = styled.span`
+  margin-left: -1em;
+  color: ${props => props.final ? getSecColour(props.title) : 'inherit'}
 `;
 
 export {StyledAttribute, StyledFont, StyledIconPart};
