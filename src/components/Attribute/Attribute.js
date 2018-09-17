@@ -45,11 +45,11 @@ const AttrCategories = [
 
 Attribute.propTypes = {
   /** The main text of the attribute to show e.g. 'Health:' or 'Effect:'*/
-  title: PropTypes.string.isRequired,
+  title: PropTypes.oneOf(AttrCategories).isRequired,
 
   /** The numerical amount of effect that the attribute offers e.g. if a recipe
   heals Link for 2 hearts this value should be 2 ❤️❤️*/
-  value: PropTypes.oneOf(AttrCategories).isRequired,
+  value: PropTypes.number.isRequired,
 }
 
 
