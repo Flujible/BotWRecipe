@@ -55,6 +55,14 @@ Attribute.propTypes = {
   /** The numerical amount of effect that the attribute offers e.g. if a recipe
   heals Link for 2 hearts this value should be 2 ❤️❤️*/
   value: PropTypes.number.isRequired,
+
+  /** The amoung of time the effect lasts for in seconds*/
+  duration: PropTypes.number
+}
+
+Attribute.defaultProps = {
+  title: 'Health',
+  value: 3
 }
 
 
