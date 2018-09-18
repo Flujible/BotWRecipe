@@ -18,8 +18,8 @@
       "sell price": 60,
       "effects": [
         {
-          "name": "tough",
-          "level": 1,
+          "name": "Tough",
+          "value": 1,
           "duration": "1:20"
         }
       ]
