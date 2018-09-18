@@ -21,9 +21,11 @@ const getContent = (title, value) => {
   return content;
 };
 
-const Attribute = ({ title, value }) => {
-  //Render 'string' alongside the value given
-  return <StyledAttribute>{title}: <StyledFont title={title}>{getContent(title, value)}</StyledFont></StyledAttribute>;
+const Attribute = ({ title, value, duration }) => {
+  //Render the icons alongside the value given
+  let attr = duration ? <StyledAttribute>{title}: <StyledFont title={title}>{getContent(title, value)}</StyledFont> (Duration: {duration} seconds)</StyledAttribute>
+  : <StyledAttribute>{title}: <StyledFont title={title}>{getContent(title, value)}</StyledFont></StyledAttribute>;
+  return attr;
 }
 
 Attribute.description = `
