@@ -20,8 +20,8 @@ const StyledFont = styled.span`
 `;
 
 const StyledIconPart = styled.span`
-  margin-left: -1em;
-  color: ${props => props.final ? getSecColour(props.title) : 'inherit'}
+  margin-left: ${props => props.first ? '' : '-1em'};
+  color: ${props => props.final ? getSecColour(props.title) : 'inherit'};
 `;
 
 export {StyledAttribute, StyledFont, StyledIconPart};
