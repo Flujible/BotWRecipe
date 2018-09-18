@@ -6,15 +6,18 @@ import icons from '../../libs/icons.js'
 //This only returns 1 icon, not the number needed
 const getContent = (title, value) => {
   const length = icons[title].icon.length - 1;
-  let content = icons[title].icon.map((key, index) => {
-    if (index === 0) {
-      return key;
-    } else if (index === length) {
-      return <StyledIconPart title={title} final={true}>{key}</StyledIconPart>
-    } else {
-      return (<StyledIconPart>{key}</StyledIconPart>);
-    }
-  });
+  let content = [];
+  for (let i = 0; i < value; i++) {
+    icons[title].icon.map((key, index) => {
+      if (index === 0) {
+        content.push(<StyledIconPart title={title} first={true}>{key}</StyledIconPart>);
+      } else if (index === length) {
+        content.push(<StyledIconPart title={title} final={true}>{key}</StyledIconPart>);
+      } else {
+        content.push(<StyledIconPart>{key}</StyledIconPart>);
+      }
+    });
+  };
   return content;
 };
 
