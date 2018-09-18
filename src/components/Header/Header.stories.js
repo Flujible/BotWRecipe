@@ -6,5 +6,5 @@ import Header from './Header';
 storiesOf('Header', module)
   .addDecorator((story, context) => withInfo(Header.description)(story)(context))
 	.add('Standard', () => (
-		<Header>Meat-stuffed pumpkin</Header>
+		<Header>Pumpkin Stew</Header>
 	));

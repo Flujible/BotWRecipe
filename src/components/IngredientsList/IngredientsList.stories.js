@@ -5,11 +5,19 @@ import IngredientsList from './IngredientsList';
 
 const ingredients = [
   {
-    "name": "Pumpkin",
+    "name": "Fresh milk",
     "quantity": 1
   },
   {
-    "name": "Raw gourmet meat",
+    "name": "Tabantha wheat",
+    "quantity": 1
+  },
+  {
+    "name": "Goat butter",
+    "quantity": 1
+  },
+  {
+    "name": "Pumpkin",
     "quantity": 1
   }
 ];
