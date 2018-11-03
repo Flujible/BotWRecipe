@@ -5,19 +5,37 @@ import icons from "../../libs/icons.js";
 
 //This only returns 1 icon, not the number needed
 const getContent = (title, value) => {
-  const length = icons[title].icon.length - 1;
   let content = [];
-  for (let i = 0; i < value; i++) {
-    icons[title].icon.map((key, index) => {
-      if (index === 0) {
-        content.push(<StyledIconPart title={title} first={true}>{key}</StyledIconPart>);
-      } else if (index === length) {
-        content.push(<StyledIconPart title={title} final={true}>{key}</StyledIconPart>);
-      } else {
-        content.push(<StyledIconPart>{key}</StyledIconPart>);
-      }
-    });
-  };
+  if(title === "Health") {
+    const remainder = value % 1;
+    const length = icons[title][remainder].icon.length - 1;
+    for (let i = 0; i < value; i++) {
+      icons[title][remainder].icon.map((key, index) => {
+        if (index === 0) {
+              content.push(<StyledIconPart title={title} first={true}>{key}</StyledIconPart>);
+            } else if (index === length) {
+              content.push(<StyledIconPart title={title} final={true}>{key}</StyledIconPart>);
+            } else {
+              content.push(<StyledIconPart>{key}</StyledIconPart>);
+            }
+          });
+    }
+  } else {
+    const length = icons[title].icon.length - 1;
+    let content = [];
+    for (let i = 0; i < value; i++) {
+      icons[title].icon.map((key, index) => {
+        if (index === 0) {
+          content.push(<StyledIconPart title={title} first={true}>{key}</StyledIconPart>);
+        } else if (index === length) {
+          content.push(<StyledIconPart title={title} final={true}>{key}</StyledIconPart>);
+        } else {
+          content.push(<StyledIconPart>{key}</StyledIconPart>);
+        }
+      });
+    };
+  }
+
   return content;
 };
 
@@ -58,11 +76,5 @@ Attribute.propTypes = {
   /** The amoung of time the effect lasts for in seconds*/
   duration: PropTypes.number
 }
-
-Attribute.defaultProps = {
-  title: "Health",
-  value: 3
-}
-
 
 export default Attribute;
