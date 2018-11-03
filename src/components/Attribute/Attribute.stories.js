@@ -5,10 +5,16 @@ import Attribute from './Attribute';
 
 storiesOf('Attribute', module)
   .addDecorator((story, context) => withInfo(Attribute.description)(story)(context))
-  .add('Text based', () => (
+  .add('Health', () => (
+      <Attribute
+        title='Health'
+        value={2.75}
+        ></Attribute>  
+  ))
+  .add('Effect', () => (
     <Attribute
-      title='Chilly'
-      value={2}
-      duration={(4*60)+30}
-      ></Attribute>
+        title='Chilly'
+        value={3}
+        duration={(4*60)+30}
+        ></Attribute> 
   ));
