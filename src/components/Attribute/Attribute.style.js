@@ -5,8 +5,8 @@ const StyledAttribute = styled.p`
 
 `;
 
+//Look up the colours based on the title of the object from /libs/icons
 const getColour = (title) => icons[title].color;
-
 const getSecColour = (title) => icons[title].secondaryColor;
 
 const StyledFont = styled.span`
