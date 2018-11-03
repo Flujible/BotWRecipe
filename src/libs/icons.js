@@ -1,8 +1,28 @@
-const icons = {
+ export default {
   'Health': {
-    'title': 'Health',
-    'icon': [''],
-    'color': '#ec2434',
+    '0.25': {
+      'title': 'Health',
+      'icon': ['',''],
+      'color': '#807e7e',
+      'secondaryColor': '#ec2434', 
+    },
+    '0.5': {
+      'title': 'Health',
+      'icon': ['',''],
+      'color': '#807e7e',
+      'secondaryColor': '#ec2434', 
+    },
+    "0.75": {
+      'title': 'Health',
+      'icon': ['',''],
+      'color': '#807e7e',
+      'secondaryColor': '#ec2434', 
+    },
+    '0': {
+      'title': 'Health',
+      'icon': [''],
+      'color': '#ec2434',
+    },
   },
   'Electro': {
     'title': 'Electro',
@@ -65,5 +85,3 @@ const icons = {
     'color': '#ec444a',
   },
 };
-
-export default icons;
