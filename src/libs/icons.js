@@ -1,27 +1,22 @@
  export default {
   'Health': {
+    'color': '#807e7e',
+    'secondaryColor': '#ec2434', 
     '0.25': {
       'title': 'Health',
       'icon': ['',''],
-      'color': '#807e7e',
-      'secondaryColor': '#ec2434', 
     },
     '0.5': {
       'title': 'Health',
       'icon': ['',''],
-      'color': '#807e7e',
-      'secondaryColor': '#ec2434', 
     },
     "0.75": {
       'title': 'Health',
       'icon': ['',''],
-      'color': '#807e7e',
-      'secondaryColor': '#ec2434', 
     },
     '0': {
       'title': 'Health',
       'icon': [''],
-      'color': '#ec2434',
     },
   },
   'Electro': {
