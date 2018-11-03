@@ -5,13 +5,9 @@ const StyledAttribute = styled.p`
 
 `;
 
-const getColour = (title) => {
-  return icons[title].color;
-};
+const getColour = (title) => icons[title].color;
 
-const getSecColour = (title) => {
-  return icons[title].secondaryColor;
-};
+const getSecColour = (title) => icons[title].secondaryColor;
 
 const StyledFont = styled.span`
   font-family: botw-icons-dual-color;
