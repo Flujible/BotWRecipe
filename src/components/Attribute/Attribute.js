@@ -3,31 +3,54 @@ import PropTypes from "prop-types";
 import {StyledAttribute, StyledFont, StyledIconPart} from "./Attribute.style.js";
 import icons from "../../libs/icons.js";
 
-//This only returns 1 icon, not the number needed
 const getContent = (title, value) => {
   let content = [];
   if(title === "Health") {
     const remainder = value % 1;
-    const length = icons[title][remainder].icon.length - 1;
-    for (let i = 0; i < value; i++) {
-      icons[title][remainder].icon.map((key, index) => {
+    console.log(remainder);
+    const integer = value - remainder;
+    let length;
+    if(remainder === 0) {
+      length = icons[title].icon.length - 1;
+    } else {
+      length = icons[title][remainder].icon.length - 1;
+    }
+    
+    for (let index = 0; index < integer; index++) {
+      //Push a styledIconPart with the full heart icon to the content array
+      icons[title].icon.map((key, index) => {
         if (index === 0) {
-              content.push(<StyledIconPart title={title} first={true}>{key}</StyledIconPart>);
-            } else if (index === length) {
-              content.push(<StyledIconPart title={title} final={true}>{key}</StyledIconPart>);
-            } else {
-              content.push(<StyledIconPart>{key}</StyledIconPart>);
-            }
-          });
+          //Sets the 'first' prop to true
+          content.push(<StyledIconPart title={title} first={true}>{key}</StyledIconPart>);
+        } else if (index === length) {
+          //Sets the 'final' prop to true
+          content.push(<StyledIconPart title={title} final={true}>{key}</StyledIconPart>);
+        }
+      });
+    }
+    
+    if(remainder !== 0) {
+      icons[title][remainder].icon.map((key, index) => {
+      if (index === 0) {
+        //Sets the 'first' prop to true
+        content.push(<StyledIconPart title={title} first={true}>{key}</StyledIconPart>);
+        } else if (index === length) {
+          //Sets the 'final' prop to true
+          content.push(<StyledIconPart title={title} final={true}>{key}</StyledIconPart>);
+        } else {
+          content.push(<StyledIconPart>{key}</StyledIconPart>);
+        }
+      });
     }
   } else {
     const length = icons[title].icon.length - 1;
-    let content = [];
     for (let i = 0; i < value; i++) {
       icons[title].icon.map((key, index) => {
         if (index === 0) {
+          //Sets the 'first' prop to true
           content.push(<StyledIconPart title={title} first={true}>{key}</StyledIconPart>);
         } else if (index === length) {
+          //Sets the 'final' prop to true
           content.push(<StyledIconPart title={title} final={true}>{key}</StyledIconPart>);
         } else {
           content.push(<StyledIconPart>{key}</StyledIconPart>);
