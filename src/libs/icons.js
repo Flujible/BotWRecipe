@@ -2,6 +2,7 @@
   'Health': {
     'color': '#807e7e',
     'secondaryColor': '#ec2434', 
+    'icon': ['', ''],
     '0.25': {
       'title': 'Health',
       'icon': ['',''],
@@ -13,10 +14,6 @@
     "0.75": {
       'title': 'Health',
       'icon': ['',''],
-    },
-    '0': {
-      'title': 'Health',
-      'icon': [''],
     },
   },
   'Electro': {
