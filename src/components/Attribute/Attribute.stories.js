@@ -7,8 +7,8 @@ storiesOf('Attribute', module)
   .addDecorator((story, context) => withInfo(Attribute.description)(story)(context))
   .add('Text based', () => (
     <Attribute
-      title='Tough'
-      value={1}
+      title='Chilly'
+      value={2}
       duration={(4*60)+30}
       ></Attribute>
   ));
