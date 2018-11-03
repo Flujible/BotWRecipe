@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import {StyledAttribute, StyledFont, StyledIconPart} from './Attribute.style.js';
-import icons from '../../libs/icons.js'
+import React from "react";
+import PropTypes from "prop-types";
+import {StyledAttribute, StyledFont, StyledIconPart} from "./Attribute.style.js";
+import icons from "../../libs/icons.js";
 
 //This only returns 1 icon, not the number needed
 const getContent = (title, value) => {
@@ -23,10 +23,9 @@ const getContent = (title, value) => {
 
 const Attribute = ({ title, value, duration }) => {
   //Render the icons alongside the value given
-  let attr = duration ? <StyledAttribute>{title}: <StyledFont title={title}>{getContent(title, value)}</StyledFont> (Duration: {duration} seconds)</StyledAttribute>
-  : <StyledAttribute>{title}: <StyledFont title={title}>{getContent(title, value)}</StyledFont></StyledAttribute>;
-  return attr;
-}
+  return duration ? <StyledAttribute>{title}: <StyledFont title={title}>{getContent(title, value)}</StyledFont> (Duration: {duration} seconds)</StyledAttribute>
+  : <StyledAttribute>{title}: <StyledFont title={title}>{getContent(title, value)}</StyledFont></StyledAttribute>
+  };
 
 Attribute.description = `
   Attributes are used to show what a food item provides for Link once eaten, for
@@ -34,22 +33,22 @@ Attribute.description = `
 `;
 
 const AttrCategories = [
-  'Health',
-  'Electro',
-  'Hasty',
-  'Spicy',
-  'Chilly',
-  'Mighty',
-  'Hearty',
-  'Energizing',
-  'Enduring',
-  'Tough',
-  'Sneaky',
-  'Fireproof',
+  "Health",
+  "Electro",
+  "Hasty",
+  "Spicy",
+  "Chilly",
+  "Mighty",
+  "Hearty",
+  "Energizing",
+  "Enduring",
+  "Tough",
+  "Sneaky",
+  "Fireproof",
 ];
 
 Attribute.propTypes = {
-  /** The main text of the attribute to show e.g. 'Health:' or 'Effect:'*/
+  /** The main text of the attribute to show e.g. "Health:" or "Effect:"*/
   title: PropTypes.oneOf(AttrCategories).isRequired,
 
   /** The numerical amount of effect that the attribute offers e.g. if a recipe
@@ -61,7 +60,7 @@ Attribute.propTypes = {
 }
 
 Attribute.defaultProps = {
-  title: 'Health',
+  title: "Health",
   value: 3
 }
 
