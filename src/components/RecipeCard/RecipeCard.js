@@ -1,11 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import StyledRecipeCard from "./RecipeCard.style";
-import Attribute from "./Attribute/Attribute";
-import Button from "./Button/Button";
-import Header from "./Header/Header";
-import Image from "./Image/Image";
-import IngredientsList from "./IngredientsList/IngredientsList";
+import Attribute from "../Attribute/Attribute";
+import Button from "../Button/Button";
+import Header from "../Header/Header";
+import IngredientsList from "../IngredientsList/IngredientsList";
 
 const RecipeCard = ({
 	attributes,
@@ -15,14 +14,22 @@ const RecipeCard = ({
 	imgSrc,
 	ingredients,
 }) => {
-    const attributesList = attributes.map(attribute => {
-        <Attribute title={attribute.title} value={attribute.value} />
-    }) 
-    return <StyledRecipeCard>
-        <Image src={imgSrc} />
-        <Header>{headerText}</Header>
-        {attributesList}
+    const attributesList = [];
+    
+    attributesList.push(Object.keys(attributes));
+        
+        
+        // <Attribute title={attr} value={attributes[attr]} />)
+    console.log(attributesList)
+
+    return (<StyledRecipeCard>
+        <Header imgSrc={imgSrc}>{headerText}</Header>
+        <div>
+            {console.log(attributesList)}
+        </div>
         <IngredientsList ingredients={ingredients} />
         <Button onClick={buttonOnClick}>{buttonText}</Button>
-    </StyledRecipeCard>
+    </StyledRecipeCard>)
 };
+
+export default RecipeCard;
