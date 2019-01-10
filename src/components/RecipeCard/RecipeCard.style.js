@@ -8,7 +8,7 @@ const StyledRecipeCard = styled.div`
 	width: 50%;
 	margin: 0 auto;
 	display: block;		
-	background-color: white;
+	background-color: rgb(128,128,128, 0.5);
 `;
 
 export default StyledRecipeCard;
