@@ -11,7 +11,6 @@ const getContent = (title, value) => {
 	let content = [];
 	if (title === "Health") {
 		const remainder = value % 1;
-		console.log(remainder);
 		const integer = value - remainder;
 		let length;
 		if (remainder === 0) {
