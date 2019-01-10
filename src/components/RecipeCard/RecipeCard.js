@@ -14,18 +14,18 @@ const RecipeCard = ({
 	imgSrc,
 	ingredients,
 }) => {
-    const attributesList = [];
-    
-    attributesList.push(Object.keys(attributes));
-        
-        
-        // <Attribute title={attr} value={attributes[attr]} />)
-    console.log(attributesList)
+    const attributesList = Object.keys(attributes);
+
+    const getAttr = (attributesList => attributesList.map(attrKey =>         
+            <Attribute title={attrKey} value={attributes[attrKey]} />
+        ));
+
+    const attr = getAttr(attributesList);
 
     return (<StyledRecipeCard>
         <Header imgSrc={imgSrc}>{headerText}</Header>
         <div>
-            {console.log(attributesList)}
+            {attr}
         </div>
         <IngredientsList ingredients={ingredients} />
         <Button onClick={buttonOnClick}>{buttonText}</Button>
