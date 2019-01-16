@@ -30,19 +30,19 @@ export default {
 		title: "Spicy",
 		icon: ["", ""],
 		color: "#a3fcfe",
-		secondaryColor: "#fbfbe1",
+		secondaryColor: "#CDD2D5",
 	},
 	Chilly: {
 		title: "Chilly",
 		icon: ["", "", "", "", "", "", ""],
 		color: "#ff9902",
-		secondaryColor: "#fbfbe1",
+		secondaryColor: "#CDD2D5",
 	},
 	Mighty: {
 		title: "Mighty",
 		icon: ["", "", ""],
-		color: "#fbfbe1",
-		secondaryColor: "#fbfbe1",
+		color: "#CDD2D5",
+		secondaryColor: "#CDD2D5",
 	},
 	Hearty: {
 		title: "Hearty",
@@ -53,7 +53,7 @@ export default {
 		title: "Energizing",
 		icon: ["", ""],
 		color: "#05e704",
-		secondaryColor: "#fbfbe1",
+		secondaryColor: "#CDD2D5",
 	},
 	Enduring: {
 		title: "Enduring",
@@ -64,7 +64,7 @@ export default {
 		title: "Tough",
 		icon: ["", ""],
 		color: "#f3f3cf",
-		secondaryColor: "#fbfbe1",
+		secondaryColor: "#CDD2D5",
 	},
 	Sneaky: {
 		title: "Sneaky",

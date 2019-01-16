@@ -28,7 +28,8 @@ const RecipeCard = ({
             {attr}
         </div>
         <IngredientsList ingredients={ingredients} />
-        <Button onClick={buttonOnClick}>{buttonText}</Button>
+        { (buttonText && buttonOnClick) && 
+            <Button onClick={buttonOnClick}>{buttonText}</Button>}
     </StyledRecipeCard>)
 };
 

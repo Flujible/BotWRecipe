@@ -35,4 +35,4 @@ storiesOf("RecipeCard", module)
     .addDecorator((story, context) => 
         withInfo(RecipeCard.description)(story)(context),
     )
-    .add("Pimpkin Stew", () => <RecipeCard attributes={attributes} buttonOnClick={buttonOnClick} buttonText={buttonText} headerText={headerText} imgSrc={imgSrc} ingredients={ingredients} />);
+    .add("Pimpkin Stew", () => <RecipeCard attributes={attributes} headerText={headerText} imgSrc={imgSrc} ingredients={ingredients} />);
