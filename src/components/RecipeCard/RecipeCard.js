@@ -14,13 +14,12 @@ const RecipeCard = ({
 	imgSrc,
 	ingredients,
 }) => {
-    const attributesList = Object.keys(attributes);
-
-    const getAttr = (attributesList => attributesList.map(attrKey =>         
-            <Attribute title={attrKey} value={attributes[attrKey]} />
-        ));
-
-    const attr = getAttr(attributesList);
+    
+    const attr = attributes.map(attr => {
+        return attr.duration ? 
+        <Attribute title={attr.name} value={attr.value} duration={attr.duration}/>
+        : <Attribute title={attr.name} value={attr.value} />
+    });
 
     return (<StyledRecipeCard>
         <Header imgSrc={imgSrc}>{headerText}</Header>
