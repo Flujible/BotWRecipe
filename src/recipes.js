@@ -36,7 +36,7 @@ export default {
           "quantity": 1
         },
         {
-          "name": "Raw gourmet meat OR Raw whole bird OR Raw prime meat OR Raw bird thigh OR Raw Meat OR Raw bird drumstick",
+          "name": "Raw gourmet meat, Raw whole bird, Raw prime meat, Raw bird thigh, Raw Meat or Raw bird drumstick",
           "quantity": 1
         }
       ],
