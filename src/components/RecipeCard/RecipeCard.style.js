@@ -6,7 +6,8 @@ const StyledRecipeCard = styled.div`
 	border-radius: 8px;
 	padding: 20px;
 	width: 50%;
-	margin: 0 auto;
+	max-width: 800px;
+	margin: 0 auto 50px auto;
 	display: block;		
 	background-color: #fff;
 `;
