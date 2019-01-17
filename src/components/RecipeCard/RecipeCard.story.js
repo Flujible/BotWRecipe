@@ -3,10 +3,17 @@ import { storiesOf, action, withInfo } from "../../stories";
 
 import RecipeCard from "./RecipeCard";
 
-const attributes = {
-    "Health": 2.5,
-    "Chilly": 3,
-};
+const attributes = [
+	{
+		name: "Health",
+		value: 2.75,
+	},
+	{
+	  "name": "Chilly",
+	  "value": 5,
+	  "duration": "120"
+	}
+  ];
 const buttonText = "Edit";
 const buttonOnClick = action("clicked");
 const headerText = "Pumpkin Stew";
