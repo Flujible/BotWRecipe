@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
     "http-server": "^0.11.1",
+    "nodemon": "^1.18.9",
     "npm": "^6.5.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
@@ -19,7 +22,8 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public",
-    "lint": "eslint ./src"
+    "lint": "eslint ./src",
+    "server": "nodemon server.js"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.4.11",
