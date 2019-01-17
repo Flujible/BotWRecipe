@@ -11,7 +11,7 @@ const requireAll = context => context.keys().map(context)
 
 
 function loadStories() {
-  requireAll(require.context('../src/components/', true, /\.stories.js$/) )
+  requireAll(require.context('../src/components/', true, /\.story.js$/) )
 }
 
 configure(loadStories, module);
