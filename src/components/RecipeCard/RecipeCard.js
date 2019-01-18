@@ -15,7 +15,7 @@ const RecipeCard = ({
 	ingredients,
 }) => {
     
-    const attr = attributes.map(attr => {
+    const createAttr = (attributes) => attributes.map(attr => {
         return attr.duration ? 
         <Attribute title={attr.name} value={attr.value} duration={attr.duration}/>
         : <Attribute title={attr.name} value={attr.value} />
@@ -23,9 +23,10 @@ const RecipeCard = ({
 
     return (<StyledRecipeCard>
         <Header imgSrc={imgSrc}>{headerText}</Header>
+        {attributes && 
         <div>
-            {attr}
-        </div>
+            {createAttr(attributes)}
+        </div>}
         <IngredientsList ingredients={ingredients} />
         { (buttonText && buttonOnClick) && 
             <Button onClick={buttonOnClick}>{buttonText}</Button>}
