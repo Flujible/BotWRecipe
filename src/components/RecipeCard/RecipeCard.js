@@ -3,14 +3,14 @@ import PropTypes from "prop-types";
 import StyledRecipeCard from "./RecipeCard.style";
 import Attribute from "../Attribute/Attribute";
 import Button from "../Button/Button";
-import Header from "../Header/Header";
+import Title from "../Title/Title";
 import IngredientsList from "../IngredientsList/IngredientsList";
 
 const RecipeCard = ({
 	attributes,
 	buttonText,
 	buttonOnClick,
-	headerText,
+	TitleText,
 	imgSrc,
 	ingredients,
 }) => {
@@ -22,7 +22,7 @@ const RecipeCard = ({
     });
 
     return (<StyledRecipeCard>
-        <Header imgSrc={imgSrc}>{headerText}</Header>
+        <Title imgSrc={imgSrc}>{TitleText}</Title>
         {attributes && 
         <div>
             {createAttr(attributes)}

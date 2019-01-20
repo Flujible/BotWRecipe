@@ -16,7 +16,7 @@ const attributes = [
   ];
 const buttonText = "Edit";
 const buttonOnClick = action("clicked");
-const headerText = "Pumpkin Stew";
+const TitleText = "Pumpkin Stew";
 const imgSrc = "http://botw-recipes.com/assets/images/stuff/recipes/10.png";
 const ingredients = [
 	{
@@ -42,4 +42,4 @@ storiesOf("RecipeCard", module)
     .addDecorator((story, context) => 
         withInfo(RecipeCard.description)(story)(context),
     )
-    .add("Pimpkin Stew", () => <RecipeCard attributes={attributes} headerText={headerText} imgSrc={imgSrc} ingredients={ingredients} />);
+    .add("Pimpkin Stew", () => <RecipeCard attributes={attributes} TitleText={TitleText} imgSrc={imgSrc} ingredients={ingredients} />);

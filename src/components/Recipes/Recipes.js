@@ -23,7 +23,7 @@ class Recipes extends React.Component {
 
     generateCards(recipesArr) {
         return recipesArr.map(recipe => {
-            return <RecipeCard attributes={recipe.effects} headerText={recipe.name} imgSrc={recipe.img} ingredients={recipe.ingredients}/>
+            return <RecipeCard attributes={recipe.effects} TitleText={recipe.name} imgSrc={recipe.img} ingredients={recipe.ingredients}/>
         })
     }
         
