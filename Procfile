@@ -1,1 +1,2 @@
-web: http-server storybook-static/
+web: node server.js
+worker: npm start
