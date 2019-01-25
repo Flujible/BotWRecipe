@@ -1,14 +1,10 @@
 import styled from "styled-components";
+import StyledButton from "../Button/Button.style";
 
 const StyledHeader = styled.div`
     font-family: TheWildBreathOfZelda, Arial, sans-serif;
-    font-size: 3em;
+    font-size: 4em;
     text-align: center;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    background-color: #fff;
-    box-shadow: 0px 3px 5px 0px #ccc;
 `
 
 export default StyledHeader;
