@@ -14,6 +14,7 @@ const StyledTitle = styled.h2`
 	font-size: 3em;
 	display: inline-block;
 	margin: 0 0 0 20px;
+	font-weight: 300;
 `;
 
 const Title = ({ imgSrc, children }) => (
