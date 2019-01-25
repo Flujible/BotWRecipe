@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const StyledButton = styled.button`
 	font-family: TheWildBreathOfZelda, Arial, sans-serif;

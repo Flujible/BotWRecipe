@@ -1,6 +1,6 @@
-import React from "react";
-import PropTypes from "prop-types";
-import StyledButton from "./Button.style.js";
+import React from 'react';
+import PropTypes from 'prop-types';
+import StyledButton from './Button.style.js';
 
 const Button = ({ children, onClick }) => {
 	return <StyledButton onClick={onClick}>{children}</StyledButton>;

@@ -1,29 +1,29 @@
-import React from "react";
-import { storiesOf, action, withInfo } from "../../stories";
+import React from 'react';
+import { storiesOf, withInfo } from '../../stories';
 
-import IngredientsList from "./IngredientsList";
+import IngredientsList from './IngredientsList';
 
 const ingredients = [
 	{
-		name: "Fresh milk",
+		name: 'Fresh milk',
 		quantity: 1,
 	},
 	{
-		name: "Tabantha wheat",
+		name: 'Tabantha wheat',
 		quantity: 1,
 	},
 	{
-		name: "Goat butter",
+		name: 'Goat butter',
 		quantity: 1,
 	},
 	{
-		name: "Pumpkin",
+		name: 'Pumpkin',
 		quantity: 1,
 	},
 ];
 
-storiesOf("IngredientsList", module)
+storiesOf('IngredientsList', module)
 	.addDecorator((story, context) =>
 		withInfo(IngredientsList.description)(story)(context),
 	)
-	.add("Standard", () => <IngredientsList ingredients={ingredients} />);
+	.add('Standard', () => <IngredientsList ingredients={ingredients} />);

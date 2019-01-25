@@ -1,7 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
-import styled from "styled-components";
-import Image from "../Image/Image";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import Image from '../Image/Image';
 
 const TitleDiv = styled.div`
 	border-bottom: solid;
@@ -31,6 +31,6 @@ Title.propTypes = {
 	children: PropTypes.string.isRequired,
 };
 
-Title.displayName = "Title";
+Title.displayName = 'Title';
 
 export default Title;

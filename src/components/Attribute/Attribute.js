@@ -1,15 +1,15 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 import {
 	StyledAttribute,
 	StyledFont,
 	StyledIconPart,
-} from "./Attribute.style.js";
-import icons from "../../libs/icons.js";
+} from './Attribute.style.js';
+import icons from '../../libs/icons.js';
 
 const getContent = (title, value) => {
 	let content = [];
-	if (title === "Health") {
+	if (title === 'Health') {
 		const remainder = value % 1;
 		const integer = value - remainder;
 		let length;
@@ -93,12 +93,14 @@ const Attribute = ({ title, value, duration }) => {
 	//Render the icons alongside the value given
 	return duration ? (
 		<StyledAttribute>
-			{title}: <StyledFont title={title}>{getContent(title, value)}</StyledFont>{" "}
+			{title}:{' '}
+			<StyledFont title={title}>{getContent(title, value)}</StyledFont>{' '}
 			(Duration: {duration} seconds)
 		</StyledAttribute>
 	) : (
 		<StyledAttribute>
-			{title}: <StyledFont title={title}>{getContent(title, value)}</StyledFont>
+			{title}:{' '}
+			<StyledFont title={title}>{getContent(title, value)}</StyledFont>
 		</StyledAttribute>
 	);
 };
@@ -109,18 +111,18 @@ Attribute.description = `
 `;
 
 const AttrCategories = [
-	"Health",
-	"Electro",
-	"Hasty",
-	"Spicy",
-	"Chilly",
-	"Mighty",
-	"Hearty",
-	"Energizing",
-	"Enduring",
-	"Tough",
-	"Sneaky",
-	"Fireproof",
+	'Health',
+	'Electro',
+	'Hasty',
+	'Spicy',
+	'Chilly',
+	'Mighty',
+	'Hearty',
+	'Energizing',
+	'Enduring',
+	'Tough',
+	'Sneaky',
+	'Fireproof',
 ];
 
 Attribute.propTypes = {

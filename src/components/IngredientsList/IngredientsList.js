@@ -1,6 +1,6 @@
-import React from "react";
-import PropTypes from "prop-types";
-import StyledIngredientsList from "./IngredientsList.style.js";
+import React from 'react';
+import PropTypes from 'prop-types';
+import StyledIngredientsList from './IngredientsList.style.js';
 
 const IngredientsList = ({ ingredients }) => {
 	const listItems = ingredients.map(ingredient => (
