@@ -8,7 +8,7 @@ const StyledButton = styled.button`
 	border-radius: 4px;
 	font-size: 1.5em;
 	font-weight: bold;
-	background-color: hsl(24, 9%, 82%);
+	background-color: #fff;
 	text-transform: uppercase;
 `;
 
