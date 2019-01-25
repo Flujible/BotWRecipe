@@ -14,9 +14,8 @@ body {
   background-color: #fdffe0;
   color: #161616;
   font-size: 1.5em;
-  font-weight: 600;
 }
 
 .App {
-  padding: 20px;
+  padding: 120px 20px 0 20px;
 }
