@@ -25,7 +25,6 @@ const StyledHeaderContainer = styled.div`
 
 const Header = ({ children }) => (
 	<StyledHeaderContainer>
-		<Button>Login</Button>
 		<StyledHeader>{children}</StyledHeader>
 	</StyledHeaderContainer>
 );

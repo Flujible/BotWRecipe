@@ -19,7 +19,7 @@ class Recipes extends React.Component {
 					this.setState(result);
 				},
 				error => {
-					console.log(`oh shit, there was a problem: ${error}`);
+					console.error(`oh shit, there was a problem: ${error}`); // eslint-disable-line
 				},
 			);
 	}
