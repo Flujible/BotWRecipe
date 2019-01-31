@@ -3,7 +3,7 @@ const cors = require('cors');
 const path = require('path');
 const app = express();
 const data = require('./recipeData.js');
-const port = process.env.port || 8080;
+const port = process.env.PORT || 8080;
 
 app.use(cors());
 app.use(express.static(`${__dirname}/src/assets`));
