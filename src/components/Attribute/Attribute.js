@@ -37,6 +37,7 @@ const getContent = (title, value) => {
 						</StyledIconPart>,
 					);
 				}
+				return content;
 			});
 		}
 

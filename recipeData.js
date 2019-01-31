@@ -1,103 +1,103 @@
 module.exports = {
 	recipes: [
 		{
-			name: "Monster Cake",
+			name: 'Monster Cake',
 			ingredients: [
 				{
-					name: "Monster extract",
+					name: 'Monster extract',
 					quantity: 1,
 				},
 				{
-					name: "Tabantha wheat",
+					name: 'Tabantha wheat',
 					quantity: 1,
 				},
 				{
-					name: "Cane sugar",
+					name: 'Cane sugar',
 					quantity: 1,
 				},
 				{
-					name: "Goat butter",
+					name: 'Goat butter',
 					quantity: 1,
 				},
 			],
-			img: "http://botw-recipes.com/assets/images/stuff/recipes/5.png",
+			img: 'http://botw-recipes.com/assets/images/stuff/recipes/5.png',
 			effects: [
 				{
-					name: "Health",
+					name: 'Health',
 					value: 2,
 				},
 			],
 		},
 		{
-			name: "Meat-stuffed pumpkin",
+			name: 'Meat-stuffed pumpkin',
 			ingredients: [
 				{
-					name: "pumpkin",
+					name: 'pumpkin',
 					quantity: 1,
 				},
 				{
 					name:
-						"Raw gourmet meat, Raw whole bird, Raw prime meat, Raw bird thigh, Raw Meat or Raw bird drumstick",
+						'Raw gourmet meat, Raw whole bird, Raw prime meat, Raw bird thigh, Raw Meat or Raw bird drumstick',
 					quantity: 1,
 				},
 			],
-			img: "http://botw-recipes.com/assets/images/stuff/recipes/65.png",
+			img: 'http://botw-recipes.com/assets/images/stuff/recipes/65.png',
 			effects: [
 				{
-					name: "Tough",
+					name: 'Tough',
 					value: 1,
-					duration: "1:20",
+					duration: '1:20',
 				},
 			],
 		},
 		{
-			name: "Fruitcake",
+			name: 'Fruitcake',
 			ingredients: [
 				{
-					name: "Apple or Wildberry",
+					name: 'Apple or Wildberry',
 					quantity: 1,
 				},
 				{
 					name:
-						"Hearty duran, palm fruit, hydromelonspicy pepper, voltfruit, fleet-lotus seeds or might banana",
+						'Hearty duran, palm fruit, hydromelonspicy pepper, voltfruit, fleet-lotus seeds or might banana',
 					quantity: 1,
 				},
 				{
-					name: "Tabantha wheat",
+					name: 'Tabantha wheat',
 					quantity: 1,
 				},
 				{
-					name: "Cane sugar",
+					name: 'Cane sugar',
 					quantity: 1,
 				},
 			],
-			img: "http://botw-recipes.com/assets/images/stuff/recipes/1.png",
+			img: 'http://botw-recipes.com/assets/images/stuff/recipes/1.png',
 		},
 		{
-			name: "Seafood paella",
+			name: 'Seafood paella',
 			ingredients: [
 				{
-					name: "Mighty porgy or armoured porgy",
+					name: 'Mighty porgy or armoured porgy',
 					quantity: 1,
 				},
 				{
-					name: "Hearty blueshell snail",
+					name: 'Hearty blueshell snail',
 					quantity: 1,
 				},
 				{
-					name: "Hylian rice",
+					name: 'Hylian rice',
 					quantity: 1,
 				},
 				{
-					name: "Goat butter",
+					name: 'Goat butter',
 					quantity: 1,
 				},
 				{
-					name: "Salt",
+					name: 'Salt',
 					quantity: 1,
 				},
 			],
-			img: "http://botw-recipes.com/assets/images/stuff/recipes/2.png",
+			img: 'http://botw-recipes.com/assets/images/stuff/recipes/2.png',
 		},
 	],
 };
