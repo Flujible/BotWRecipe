@@ -15,5 +15,5 @@ app.get('/', (req, res) =>
 app.get('/api/recipes', (req, res) => res.send(data));
 
 app.listen(port, () => {
-	console.log(`Listening on port ${port}`);
+	console.log(`Listening on port ${port}`); //eslint-disable-line
 });

@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import StyledButton from '../Button/Button.style';
-import Button from '../Button/Button';
 import StyledHeader from './Header.style';
 
 const StyledHeaderContainer = styled.div`
