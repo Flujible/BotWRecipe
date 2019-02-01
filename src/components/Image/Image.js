@@ -19,6 +19,7 @@ Image.propTypes = {
 	src: PropTypes.string.isRequired,
 
 	/** Depicts if component is rendered in edit mode */
+	edit: PropTypes.bool,
 };
 
 export default Image;
