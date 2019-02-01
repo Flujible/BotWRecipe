@@ -4,6 +4,10 @@ import {
 	StyledAttribute,
 	StyledFont,
 	StyledIconPart,
+	StyledAttributeInput,
+	StyledAttrTitleInput,
+	StyledAttrValueInput,
+	StyledAttrDurationInput,
 } from './Attribute.style.js';
 import icons from '../../libs/icons.js';
 
@@ -90,18 +94,19 @@ const getContent = (title, value) => {
 	return content;
 };
 
-const Attribute = ({ title, value, duration }) => {
+const Attribute = ({ title, value, duration, edit }) => {
 	//Render the icons alongside the value given
-	return duration ? (
-		<StyledAttribute>
-			{title}:{' '}
-			<StyledFont title={title}>{getContent(title, value)}</StyledFont>{' '}
-			(Duration: {duration} seconds)
-		</StyledAttribute>
+	return edit ? (
+		<StyledAttributeInput>
+			<StyledAttrTitleInput placeholder={title} />
+			<StyledAttrValueInput placeholder={value} />
+			<StyledAttrDurationInput placeholder={duration || 'Duration'} />
+		</StyledAttributeInput>
 	) : (
 		<StyledAttribute>
-			{title}:{' '}
+			{title}:
 			<StyledFont title={title}>{getContent(title, value)}</StyledFont>
+			{duration && `(Duration: ${duration} seconds)`}
 		</StyledAttribute>
 	);
 };

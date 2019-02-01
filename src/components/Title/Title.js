@@ -1,28 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import Image from '../Image/Image';
+import Image, { ImageInput } from '../Image/Image';
+import { TitleDiv, StyledTitleInput, StyledTitle } from './Title.style';
 
-const TitleDiv = styled.div`
-	border-bottom: solid;
-	border-width: 1px;
-	padding-bottom: 15px;
-`;
-
-const StyledTitle = styled.h2`
-	font-family: TheWildBreathOfZelda, Arial, sans-serif;
-	font-size: 3em;
-	display: inline-block;
-	margin: 0 0 0 20px;
-	font-weight: 300;
-`;
-
-const Title = ({ imgSrc, children }) => (
-	<TitleDiv>
-		<Image src={imgSrc} />
-		<StyledTitle>{children}</StyledTitle>
-	</TitleDiv>
-);
+const Title = ({ imgSrc, children, edit }) => {
+	return edit ? (
+		<TitleDiv>
+			<Image edit src={imgSrc} />
+			<StyledTitleInput placeholder={children} />
+		</TitleDiv>
+	) : (
+		<TitleDiv>
+			<Image src={imgSrc} />
+			<StyledTitle>{children}</StyledTitle>
+		</TitleDiv>
+	);
+};
 
 Title.description = `
   Titles are used to title a recipe with its given name from the game.
@@ -30,6 +23,12 @@ Title.description = `
 Title.propTypes = {
 	/** Text that appears in the title*/
 	children: PropTypes.string.isRequired,
+
+	/** Path to img to be used alongside the title */
+	imgSrc: PropTypes.string,
+
+	/** Depicts if component is rendered in edit mode */
+	edit: PropTypes.bool,
 };
 
 Title.displayName = 'Title';

@@ -18,4 +18,20 @@ const StyledIconPart = styled.span`
 	color: ${props => (props.final ? getSecColour(props.title) : 'inherit')};
 `;
 
-export { StyledAttribute, StyledFont, StyledIconPart };
+const StyledAttributeInput = styled.div``;
+
+const StyledAttrTitleInput = styled.input``;
+
+const StyledAttrValueInput = styled.input``;
+
+const StyledAttrDurationInput = styled.input``;
+
+export {
+	StyledAttribute,
+	StyledFont,
+	StyledIconPart,
+	StyledAttributeInput,
+	StyledAttrTitleInput,
+	StyledAttrValueInput,
+	StyledAttrDurationInput,
+};

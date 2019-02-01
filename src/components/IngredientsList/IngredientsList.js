@@ -1,14 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import StyledIngredientsList from './IngredientsList.style.js';
+import {
+	StyledIngredientsList,
+	StyledIngNameInput,
+	StyledIngQuantInput,
+} from './IngredientsList.style.js';
 
-const IngredientsList = ({ ingredients }) => {
-	const listItems = ingredients.map(ingredient => (
-		<li key={ingredient.name}>
-			{ingredient.quantity} {ingredient.name}
-		</li>
-	));
-	return <StyledIngredientsList>{listItems}</StyledIngredientsList>;
+const IngredientsList = ({ ingredients, edit }) => {
+	const listItems = edit
+		? ingredients.map(ingredient => (
+				<li key={ingredient.name}>
+					<StyledIngQuantInput placeholder={ingredient.quantity} />
+					<StyledIngNameInput placeholder={ingredient.name} />
+				</li>
+		  ))
+		: ingredients.map(ingredient => (
+				<li key={ingredient.name}>
+					{ingredient.quantity} {ingredient.name}
+				</li>
+		  ));
+	return (
+		<div>
+			Ingredients:
+			<StyledIngredientsList>{listItems}</StyledIngredientsList>
+		</div>
+	);
 };
 
 IngredientsList.description = `
@@ -17,7 +33,11 @@ IngredientsList.description = `
 `;
 
 IngredientsList.propTypes = {
+	/** Array of the ingredients to be displayed */
 	ingredients: PropTypes.array.isRequired,
+
+	/** Depicts if component is rendered in edit mode */
+	edit: PropTypes.bool,
 };
 
 export default IngredientsList;

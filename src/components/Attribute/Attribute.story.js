@@ -10,4 +10,7 @@ storiesOf('Attribute', module)
 	.add('Health', () => <Attribute title="Health" value={2.25} />)
 	.add('Effect', () => (
 		<Attribute title="Chilly" value={3} duration={4 * 60 + 30} />
+	))
+	.add('Edit mode', () => (
+		<Attribute title="Chilly" value={3} duration={4 * 60 + 30} edit />
 	));

@@ -1,5 +1,10 @@
 import styled from 'styled-components';
 
-const StyledIngredientsList = styled.ul``;
+const StyledIngredientsList = styled.ul`
+	margin-top: 0px;
+`;
 
-export default StyledIngredientsList;
+const StyledIngNameInput = styled.input``;
+const StyledIngQuantInput = styled.input``;
+
+export { StyledIngredientsList, StyledIngNameInput, StyledIngQuantInput };

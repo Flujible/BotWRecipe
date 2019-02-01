@@ -9,4 +9,10 @@ storiesOf('Image', module)
 	)
 	.add('Standard', () => (
 		<Image src="http://botw-recipes.com/assets/images/stuff/recipes/10.png" />
+	))
+	.add('Edit mode', () => (
+		<Image
+			edit
+			src="http://botw-recipes.com/assets/images/stuff/recipes/10.png"
+		/>
 	));

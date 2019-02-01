@@ -26,4 +26,5 @@ storiesOf('IngredientsList', module)
 	.addDecorator((story, context) =>
 		withInfo(IngredientsList.description)(story)(context),
 	)
-	.add('Standard', () => <IngredientsList ingredients={ingredients} />);
+	.add('Standard', () => <IngredientsList ingredients={ingredients} />)
+	.add('Edit mode', () => <IngredientsList ingredients={ingredients} edit />);

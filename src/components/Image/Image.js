@@ -1,9 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import StyledImage from './Image.style.js';
+import { StyledImage, StyledImageInput } from './Image.style.js';
 
-const Image = ({ src }) => {
-	return <StyledImage src={src} />;
+const Image = ({ src, edit }) => {
+	return edit ? (
+		<StyledImageInput placeholder={src} />
+	) : (
+		<StyledImage src={src} />
+	);
 };
 
 Image.description = `
@@ -13,6 +17,8 @@ Image.description = `
 Image.propTypes = {
 	/** Location of the image*/
 	src: PropTypes.string.isRequired,
+
+	/** Depicts if component is rendered in edit mode */
 };
 
 export default Image;

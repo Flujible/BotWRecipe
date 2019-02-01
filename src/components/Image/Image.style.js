@@ -6,4 +6,10 @@ const StyledImage = styled.img`
 	vertical-align: text-bottom;
 `;
 
-export default StyledImage;
+const StyledImageInput = styled.input`
+	display: inline-block;
+	margin: 2px;
+	vertical-align: text-bottom;
+`;
+
+export { StyledImage, StyledImageInput };

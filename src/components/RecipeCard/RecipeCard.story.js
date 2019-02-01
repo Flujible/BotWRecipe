@@ -49,7 +49,7 @@ storiesOf('RecipeCard', module)
 			ingredients={ingredients}
 		/>
 	))
-	.add('With buttons', () => {
+	.add('With buttons', () => (
 		<RecipeCard
 			attributes={attributes}
 			TitleText={TitleText}
@@ -58,4 +58,4 @@ storiesOf('RecipeCard', module)
 			buttonText={buttonText}
 			buttonOnClick={buttonOnClick}
 		/>
-	};
+	));
