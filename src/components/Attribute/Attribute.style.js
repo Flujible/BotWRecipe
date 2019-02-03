@@ -20,18 +20,4 @@ const StyledIconPart = styled.span`
 
 const StyledAttributeInput = styled.div``;
 
-const StyledAttrTitleInput = styled.input``;
-
-const StyledAttrValueInput = styled.input``;
-
-const StyledAttrDurationInput = styled.input``;
-
-export {
-	StyledAttribute,
-	StyledFont,
-	StyledIconPart,
-	StyledAttributeInput,
-	StyledAttrTitleInput,
-	StyledAttrValueInput,
-	StyledAttrDurationInput,
-};
+export { StyledAttribute, StyledFont, StyledIconPart, StyledAttributeInput };
