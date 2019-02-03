@@ -5,11 +5,10 @@ import {
 	StyledFont,
 	StyledIconPart,
 	StyledAttributeInput,
-	StyledAttrTitleInput,
-	StyledAttrValueInput,
-	StyledAttrDurationInput,
 } from './Attribute.style.js';
-import icons from '../../libs/icons.js';
+import icons from '../../libs/icons';
+import Dropdown from '../Dropdown/Dropdown';
+import NumberSelect from '../NumberSelect/NumberSelect.js';
 
 const getContent = (title, value) => {
 	let content = [];
@@ -94,13 +93,17 @@ const getContent = (title, value) => {
 	return content;
 };
 
+const getOptions = obj => Object.keys(obj);
+
+const attrDropdownValues = getOptions(icons);
+
 const Attribute = ({ title, value, duration, edit }) => {
 	//Render the icons alongside the value given
 	return edit ? (
 		<StyledAttributeInput>
-			<StyledAttrTitleInput placeholder={title} />
-			<StyledAttrValueInput placeholder={value} />
-			<StyledAttrDurationInput placeholder={duration || 'Duration'} />
+			<Dropdown selected={title} options={attrDropdownValues} />
+			<NumberSelect value={value} min={0} max={20} />
+			<NumberSelect value={duration} min={0} max={750} />
 		</StyledAttributeInput>
 	) : (
 		<StyledAttribute>
@@ -116,6 +119,7 @@ Attribute.description = `
   example 2 hearts of health or medium shock resistance
 `;
 
+//Programatically calculating these doesn't seem to make the list appear in storybook
 const AttrCategories = [
 	'Health',
 	'Electro',
@@ -141,6 +145,9 @@ Attribute.propTypes = {
 
 	/** The amoung of time the effect lasts for in seconds*/
 	duration: PropTypes.number,
+
+	/** Defines if the component should be rendered in edit mode */
+	edit: PropTypes.bool,
 };
 
 export default Attribute;
