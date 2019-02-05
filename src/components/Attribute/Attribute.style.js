@@ -18,6 +18,9 @@ const StyledIconPart = styled.span`
 	color: ${props => (props.final ? getSecColour(props.title) : 'inherit')};
 `;
 
-const StyledAttributeInput = styled.div``;
+const StyledAttributeInput = styled.fieldset`
+	font-family: 'Catamaran';
+	border: none;
+`;
 
 export { StyledAttribute, StyledFont, StyledIconPart, StyledAttributeInput };
