@@ -97,13 +97,31 @@ const getOptions = obj => Object.keys(obj);
 
 const attrDropdownValues = getOptions(icons);
 
-const Attribute = ({ title, value, duration, edit }) => {
+const Attribute = ({ title, value, duration, edit, i }) => {
 	//Render the icons alongside the value given
 	return edit ? (
 		<StyledAttributeInput>
-			<Dropdown selected={title} options={attrDropdownValues} />
-			<NumberSelect value={value} min={0} max={20} />
-			<NumberSelect value={duration} min={0} max={750} />
+			<legend>Recipe attribute</legend>
+			<Dropdown
+				selected={title}
+				options={attrDropdownValues}
+				id={'type' + i}
+				name="Type"
+			/>
+			<NumberSelect
+				value={value}
+				min={0}
+				max={20}
+				id={'strength' + i}
+				name="Strength"
+			/>
+			<NumberSelect
+				value={duration}
+				min={0}
+				max={750}
+				id={'duration' + i}
+				name="Duration"
+			/>
 		</StyledAttributeInput>
 	) : (
 		<StyledAttribute>

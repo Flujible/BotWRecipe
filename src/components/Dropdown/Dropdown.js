@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import bindMethods from 'yaab';
 
-import { StyledSelect, StyledOption } from './Dropdown.style';
+import { StyledSelect, StyledOption, StyledLabel } from './Dropdown.style';
 
 class Dropdown extends Component {
 	constructor(props) {
@@ -28,10 +28,17 @@ class Dropdown extends Component {
 	}
 
 	render() {
+		const { id, name } = this.props;
 		return (
-			<StyledSelect value={this.state.value} onChange={this.handleChange}>
-				{this.createOptions(this.props.options)}
-			</StyledSelect>
+			<React.Fragment>
+				<StyledLabel htmlFor={id}>{name}</StyledLabel>
+				<StyledSelect
+					value={this.state.value}
+					onChange={this.handleChange}
+					id={id}>
+					{this.createOptions(this.props.options)}
+				</StyledSelect>
+			</React.Fragment>
 		);
 	}
 }
@@ -46,6 +53,12 @@ Dropdown.propTypes = {
 
 	/** Option to be selected upon render */
 	selected: PropTypes.string,
+
+	/** Name of the input */
+	name: PropTypes.string,
+
+	/** Id to link the label with the input*/
+	id: PropTypes.string,
 };
 
 export default Dropdown;

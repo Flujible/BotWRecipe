@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import bindMethods from 'yaab';
 
-import StyledInput from './NumberSelect.style';
+import { StyledInput, StyledLabel } from './NumberSelect.style';
 
 class NumberSelect extends Component {
 	constructor(props) {
@@ -20,15 +20,19 @@ class NumberSelect extends Component {
 	}
 
 	render() {
-		const { max, min } = this.props;
+		const { max, min, id, name } = this.props;
 		return (
-			<StyledInput
-				type="number"
-				value={this.state.value}
-				onChange={this.handleChange}
-				max={max}
-				min={min}
-			/>
+			<React.Fragment>
+				<StyledLabel htmlFor={id}>{name}</StyledLabel>
+				<StyledInput
+					type="number"
+					id={id}
+					value={this.state.value}
+					onChange={this.handleChange}
+					max={max}
+					min={min}
+				/>
+			</React.Fragment>
 		);
 	}
 }
