@@ -7,4 +7,4 @@ storiesOf('NumberSelect', module)
 	.addDecorator((story, context) =>
 		withInfo(NumberSelect.description)(story)(context),
 	)
-	.add('Standard', () => <NumberSelect max={750} min={0} />);
+	.add('Standard', () => <NumberSelect max={750} min={0} name="Test" />);

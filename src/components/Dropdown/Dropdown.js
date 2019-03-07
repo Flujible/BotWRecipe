@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import bindMethods from 'yaab';
 
 import { StyledSelect, StyledOption, StyledLabel } from './Dropdown.style';
+import { StyledInputWrapper } from '../NumberSelect/NumberSelect.style';
 
 class Dropdown extends Component {
 	constructor(props) {
@@ -30,7 +31,7 @@ class Dropdown extends Component {
 	render() {
 		const { id, name } = this.props;
 		return (
-			<React.Fragment>
+			<StyledInputWrapper>
 				<StyledLabel htmlFor={id}>{name}</StyledLabel>
 				<StyledSelect
 					value={this.state.value}
@@ -38,7 +39,7 @@ class Dropdown extends Component {
 					id={id}>
 					{this.createOptions(this.props.options)}
 				</StyledSelect>
-			</React.Fragment>
+			</StyledInputWrapper>
 		);
 	}
 }

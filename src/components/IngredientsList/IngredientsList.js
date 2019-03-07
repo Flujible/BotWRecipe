@@ -2,23 +2,24 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {
 	StyledIngredientsList,
-	StyledIngNameInput,
-	StyledIngQuantInput,
+	StyledLi
 } from './IngredientsList.style.js';
+import NumberSelect from '../NumberSelect/NumberSelect';
+import TextInput from '../TextInput/TextInput';
 
 const IngredientsList = ({ ingredients, edit }) => {
 	const listItems = edit
 		? ingredients.map(ingredient => (
-				<li key={ingredient.name}>
-					<StyledIngQuantInput placeholder={ingredient.quantity} />
-					<StyledIngNameInput placeholder={ingredient.name} />
-				</li>
-		  ))
+			<StyledLi key={ingredient.name}>
+				<NumberSelect value={ingredient.quantity} min={1} max={5} />
+				<TextInput value={ingredient.name} />
+			</StyledLi>
+		))
 		: ingredients.map(ingredient => (
-				<li key={ingredient.name}>
-					{ingredient.quantity} {ingredient.name}
-				</li>
-		  ));
+			<li key={ingredient.name}>
+				{ingredient.quantity} {ingredient.name}
+			</li>
+		));
 	return (
 		<div>
 			Ingredients:

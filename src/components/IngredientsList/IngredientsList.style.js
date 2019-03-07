@@ -4,7 +4,8 @@ const StyledIngredientsList = styled.ul`
 	margin-top: 0px;
 `;
 
-const StyledIngNameInput = styled.input``;
-const StyledIngQuantInput = styled.input``;
+const StyledLi = styled.li`
 
-export { StyledIngredientsList, StyledIngNameInput, StyledIngQuantInput };
+`;
+
+export { StyledIngredientsList, StyledLi };
