@@ -14,9 +14,7 @@ const attributes = [
 		duration: '120',
 	},
 ];
-const buttonText = 'Edit';
-const buttonOnClick = action('clicked');
-const TitleText = 'Pumpkin Stew';
+const titleText = 'Pumpkin Stew';
 const imgSrc = 'http://botw-recipes.com/assets/images/stuff/recipes/10.png';
 const ingredients = [
 	{
@@ -44,7 +42,7 @@ storiesOf('RecipeCard', module)
 	.add('Default', () => (
 		<RecipeCard
 			attributes={attributes}
-			TitleText={TitleText}
+			titleText={titleText}
 			imgSrc={imgSrc}
 			ingredients={ingredients}
 		/>
@@ -52,7 +50,7 @@ storiesOf('RecipeCard', module)
 	.add('With buttons', () => (
 		<RecipeCard
 			attributes={attributes}
-			TitleText={TitleText}
+			titleText={titleText}
 			imgSrc={imgSrc}
 			ingredients={ingredients}
 			editAllowed

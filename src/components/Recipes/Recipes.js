@@ -30,7 +30,7 @@ class Recipes extends React.Component {
 				<RecipeCard
 					key={name}
 					attributes={effects}
-					TitleText={name}
+					titleText={name}
 					imgSrc={img}
 					ingredients={ingredients}
 				/>
