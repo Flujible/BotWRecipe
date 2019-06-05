@@ -55,7 +55,6 @@ storiesOf('RecipeCard', module)
 			TitleText={TitleText}
 			imgSrc={imgSrc}
 			ingredients={ingredients}
-			buttonText={buttonText}
-			buttonOnClick={buttonOnClick}
+			editAllowed
 		/>
 	));

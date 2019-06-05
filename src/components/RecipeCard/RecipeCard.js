@@ -1,20 +1,31 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import StyledRecipeCard from './RecipeCard.style';
 import Attribute from '../Attribute/Attribute';
 import Button from '../Button/Button';
 import Title from '../Title/Title';
 import IngredientsList from '../IngredientsList/IngredientsList';
+import bindMethods from 'yaab';
 
-const RecipeCard = ({
-	attributes,
-	buttonText,
-	buttonOnClick,
-	TitleText,
-	imgSrc,
-	ingredients,
-}) => {
-	const createAttr = attributes =>
+class RecipeCard extends Component {
+	constructor(props) {
+		super(props);
+		bindMethods(this);
+		this.state = {
+			edit: false,
+			attributes: this.props.attribute || [],
+			titleText: this.props.titleText || '',
+			imgSrc: this.props.imgSrc || '',
+			ingredients: this.props.ingredients || [],
+		}
+	}
+
+	onEditToggle(e) {
+		this.setState(prevState => ({edit: !prevState.edit}))
+		console.log(this.state.edit);
+	}
+
+	createAttr = attributes =>
 		attributes.map(attr => {
 			return attr.duration ? (
 				<Attribute
@@ -23,27 +34,37 @@ const RecipeCard = ({
 					duration={attr.duration}
 				/>
 			) : (
-				<Attribute title={attr.name} value={attr.value} />
-			);
+					<Attribute title={attr.name} value={attr.value} />
+				);
 		});
 
-	return (
-		<StyledRecipeCard>
-			<Title imgSrc={imgSrc}>{TitleText}</Title>
-			{attributes && <div>{createAttr(attributes)}</div>}
-			<IngredientsList ingredients={ingredients} />
-			{buttonText && buttonOnClick && (
-				<Button onClick={buttonOnClick}>{buttonText}</Button>
-			)}
-		</StyledRecipeCard>
-	);
-};
+		render() {
+			const { imgSrc, titleText, attributes, ingredients, edit} = this.state;
+			const { editAllowed } = this.props;
+			return ( edit ?
+				<StyledRecipeCard>
+					<Title  edit imgSrc={imgSrc}>{titleText}</Title>
+					{attributes && <div>{this.createAttr(attributes)}</div>}
+					<IngredientsList edit ingredients={ingredients} />
+					{editAllowed && (
+						<Button onClick={this.onEditToggle}>{!this.state.edit ? "Edit" : "Save"}</Button>
+					)}
+				</StyledRecipeCard> :
+				<StyledRecipeCard>
+					<Title imgSrc={imgSrc}>{titleText}</Title>
+					{attributes && <div>{this.createAttr(attributes)}</div>}
+					<IngredientsList ingredients={ingredients} />
+					{editAllowed && (
+						<Button onClick={this.onEditToggle}>{!this.state.edit ? "Edit" : "Save"}</Button>
+					)}
+				</StyledRecipeCard>
+			);
+		}
+}
 
 RecipeCard.propTypes = {
 	attributes: PropTypes.array,
-	buttonText: PropTypes.string,
-	buttonOnClick: PropTypes.function,
-	TitleText: PropTypes.string,
+	titleText: PropTypes.string,
 	imgSrc: PropTypes.string,
 	ingredients: PropTypes.array,
 };
